@@ -1,0 +1,16 @@
+import array as arr
+a=arr.array('i',[])
+top=-1
+print("entet the elements of  do you filld")
+x=int(input())
+for i in range(0,x+1):
+    top+=1
+    y=int(input())
+    a.append(y)
+
+if top==-1:
+    print("stack is empty")
+
+print("the stack is \n")  
+for i in range(0,top+1):
+    print(a[i])
