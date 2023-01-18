@@ -1,0 +1,17 @@
+# python-all-program
+class Teacher:
+    def speck(self):
+        print("Teacher :Akash speak loudly")
+class Student(Teacher):
+    def show(self):
+        print("Akash : i am not getting sir(shetty)")
+
+class Teacher1(Student):
+    def keepitup(self):
+        print("Akash come out of compfert zoon keep keep doing and learning")
+    
+    
+emp=Teacher1() 
+emp.speck()
+emp.show()
+emp.keepitup()
