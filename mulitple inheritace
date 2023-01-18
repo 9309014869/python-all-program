@@ -1,0 +1,19 @@
+# python-all-program
+class T:
+    def show(self,a,b):
+        print("i am farent clASS")
+        return a*b
+class B:
+    def add(self,a,b):
+        print("i am class")
+        return a//b 
+class C(T,B):
+    def mul(self,a,b):
+        print("i am extends");
+        return a+b 
+        
+        
+d=C()
+print(d.show(10,20))
+print(d.add(10,20))
+print(d.mul(10,20))
