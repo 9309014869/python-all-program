@@ -1,0 +1,15 @@
+# python-all-program
+def s(newList):
+    size=len(newList)
+    tem=newList[0]
+    newList[0]=newList[size-1]
+    newList[size-1]=tem
+    
+    
+    return newList
+    
+    
+    
+newList=[12,35,9,56,24]
+print(newList)
+print("the intergered list is",s(newList))
