@@ -1,0 +1,17 @@
+def re(arr,start,end):
+    temp=arr[start]
+    arr[start]=arr[end]
+    arr[end]=arr[start]
+    start+=1 
+    end=end-1
+    
+def l(arr,d):
+    n=len(arr)
+    re(arr,0,d-1)
+    re(arr,d,n-1)
+def p(arr):
+    for i in range(0,len(arr)):
+        print(arr[i])
+arr=[1,2,3,4]
+l(arr,2)
+p(arr)
