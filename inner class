@@ -1,0 +1,13 @@
+
+class Tejas:
+    def show(self):
+        print("outer class")
+        self.t=self.A()
+    class A:
+        def show(self):
+            print("i am inner class")
+
+t1=Tejas()
+t1.show()
+lap1=Tejas.A()
+lap1.show()
