@@ -1,0 +1,12 @@
+
+print("Hello World")
+test=(3,4,5,45,6,7,9,31)
+
+print(test)
+r=[]
+test=list(sorted(test))
+print(test)
+print(test[0])
+print(len(test))
+print(test[7])
+#for id,val in enumerate(test):
