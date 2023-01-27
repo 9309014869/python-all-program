@@ -1,0 +1,11 @@
+t=(3,4,5,600,7,777,90,8)
+print("the origanl tuple is :"  +  str(t))
+k=2
+r=[]
+t=list(sorted(t))
+for idx,val in enumerate(t):
+    if idx < k or idx >=len(t)-k:
+        r.append(val)
+r=tuple(r)        
+
+print("the extracted values : " +str(r))
