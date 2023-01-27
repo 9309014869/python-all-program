@@ -1,0 +1,8 @@
+t=(2,3,45,89,9877,7,3333,9)
+k=2
+print("the original tuple is "+str(t))
+t=list(t)
+
+tm=sorted(t)
+r=tuple(tm[:k]+ tm[-k:])
+print("the extraqted"+ str(t))
