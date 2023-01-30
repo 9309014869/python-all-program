@@ -1,0 +1,23 @@
+print("Hello World")
+s=Socket.Socket()
+print('Socket created')
+s.bind('local host',9999)
+s.listen(3)
+print(" welcome to telusko")
+
+while True:
+    c,addr=s.accept()
+    c.send(bytes("welcome to sggs"))
+    name=c.recv(1024)
+    
+    
+    
+    
+    #cilent
+    
+    import  socket
+c=Socket.socket()
+c.Connect(('local',999))
+print(c.recv(1024))
+name=input("enter your name")
+c.send(bytes(name))
