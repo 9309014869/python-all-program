@@ -1,0 +1,38 @@
+
+def A(l,m):
+    n=[]
+    for i in range(len(l)):
+        s=l[i]/m[i]
+        n.append(s)
+    for j in range(len(l)):
+        for p in range(len(l)):
+            if(n[j]>=n[p]):
+                n[j],n[p]=n[p],n[j]
+                l[j],l[p]=l[p],l[j]
+                m[j],m[p]=m[p],m[j]
+                
+    print("the sorted step 1:")
+    print(n)
+    print(l)
+    print(m)
+    print("the step 2:")
+    g=0
+    s1=15
+    i=0
+    print("the sorted step 3")
+    for i in range(len(l)):
+        if(s1>0 and m[i]<=s1):
+            s1=s1-m[i]
+            g=g+l[i]
+        
+        
+    if(s1>0):
+        g=g+s1*(l[i]/m[i])
+    print("the step 4 :")    
+    print("the Total profit",end="= ")    
+    print(g)
+    print("Algorithm end ")
+l=[5,10,15,7,8,9,4]
+m=[1,3,5,4,1,3,2]
+A(l,m)    
+    
