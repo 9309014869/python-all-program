@@ -1,0 +1,9 @@
+
+l=[]
+n=int(input("enter the  number of element in list"))
+for i in range(n):
+    m=int(input())
+    l.append(m)
+a=int(input("enter th number of element"))
+l.sort()
+print(l[-a:])
