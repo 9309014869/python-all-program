@@ -1,0 +1,32 @@
+'''
+
+                            Online Python Compiler.
+                Code, Compile, Run and Debug python program online.
+Write your code in this editor and press "Run" button to execute it.
+
+'''
+print("Hello World")
+def A(l,m):
+    
+    for i in range(len(l)):
+        for j in range(len(m)):
+            if(m[i]<=m[j]):
+                 m[i],m[j]=m[j],m[i]
+                 l[i],l[j]=l[j],l[i]
+    
+    
+    
+    print(l,m)            
+    s=["a1","a2","a3",'a4']
+    s1=[]
+    j=0
+    for i in range(0,len(l)):
+        if(l[i]>=m[j]):
+        s1.append(s[i])      
+            j=i
+
+    #print(s1)        
+                
+l=[12,10,20]
+m=[25,20,30]
+A(l,m)
