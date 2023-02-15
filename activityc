@@ -1,0 +1,14 @@
+def Activity(s,f):
+    i=0
+   
+    print("follwing activty are selected")
+    print(i)
+    for j in range(1,len(f)):
+        if s[j]>=f[i]:
+            print(j)
+            i=j 
+            
+            
+s=[1,5,12]
+f=[10,13,12]
+Activity(s,f)
