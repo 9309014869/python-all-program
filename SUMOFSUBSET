@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Main {
+    public static void function(int ind, int[] nums, List<Integer> ds, List<List<Integer>> ans) {
+        if (ind == nums.length) {
+            ans.add(new ArrayList<>(ds));
+            return;
+        }
+
+        for (int i = ind; i < nums.length; i++) {
+            if (i != ind && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            ds.add(nums[i]);
+            function(i + 1, nums, ds, ans);
+            ds.remove(ds.size() - 1);
+        }
+    }
+
+    public static List<List<Integer>> subsets(int[] nums) {
+        Arrays.sort(nums);
+        List<List<Integer>> ansList = new ArrayList<>();
+        function(0, nums, new ArrayList<>(), ansList);
+        return ansList;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 2};
+        List<List<Integer>> result = subsets(nums);
+        System.out.println(result);
+    }
+}
