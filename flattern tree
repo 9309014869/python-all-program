@@ -1,0 +1,24 @@
+public class Main {
+    private static TreeNode prev;
+
+    public Main() {
+        prev = null;
+    }
+
+    public static void flatten(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        flatten(root.right);
+        flatten(root.left);
+
+        root.right = prev;
+        root.left = null;
+        prev = root;
+    }
+
+    public static void main(String[] args) {
+        // Your main method code here
+    }
+}
