@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main
+{
+    public static getPath(Node root, ArrayList < Integer > arr, int x){
+        if(root==null){
+            return null;
+        }
+        if(root==x){
+            return true;
+        }
+        
+        if(getPath(root.left,arr,x)||(getPath(root.right,arr,x))){
+            return true;
+        }
+        arr.remove(arr.size()-1);
+         return false;
+    }
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		
+	}
+}
